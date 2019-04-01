@@ -8,6 +8,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 
 import { SearchRoutingModule } from './search-routing.module';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SearchRoutingModule } from './search-routing.module';
     FormsModule,
     FlexLayoutModule,
     ReactiveFormsModule,
+    MatButtonModule,
     MatInputModule,
     MatTableModule,
     SearchRoutingModule
