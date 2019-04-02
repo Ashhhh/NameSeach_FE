@@ -4,7 +4,9 @@ Name search FE App
 
 ## Instructions
 
-Before doing anything, you must run `npm run-script generate:apisdk` to generate the API SDK
+Before doing anything, you must run `npm run-script generate:apisdk` to generate the API SDK via the provided swagger.doc (See below)
+For local builds, you should also head over and start a NameSearch_API server!
+NameSearch_API
 
 ## Development server
 
@@ -18,9 +20,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Notes
 

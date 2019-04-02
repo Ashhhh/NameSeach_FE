@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { switchMap, startWith, debounceTime } from 'rxjs/operators';
-import { NamesService } from 'src/app/api/services';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { NamesService } from '../../../../../app/api/services';
+import { AuthService } from '../../../../../app/core/services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({

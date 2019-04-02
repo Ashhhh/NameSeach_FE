@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { AuthService } from '../../../../../app/core/services/auth.service';
+
+export const NO_LOGIN_MESSAGE = 'You need to enter a username or password';
 
 @Component({
   selector: 'app-login-page',
@@ -23,7 +25,7 @@ export class LoginPageComponent {
 
   validate() {
     if (!this.username || !this.password) {
-      this.snackbar.open('You need to enter a username or password');
+      this.snackbar.open(NO_LOGIN_MESSAGE);
       return false;
     }
 

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { AuthService as APIAuthService } from 'src/app/api/services';
+import { AuthService as APIAuthService } from '../../../app/api/services';
 import { map } from 'rxjs/operators';
 import { AuthTokenService } from './auth-token.service';
 import { Observable } from 'rxjs';
-import { Jwt } from 'src/app/api/models';
+import { Jwt } from '../../../app/api/models';
 import { Router } from '@angular/router';
-import { RoutePaths } from 'src/app/app-routing.module';
+import { RoutePaths } from '../../../app/app-routing.module';
 
 export const JWT_LOCALSTORAGE_KEY = 'jwt';
 

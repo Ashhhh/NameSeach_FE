@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AuthService as APIAuthService } from 'src/app/api/services';
+import { AuthService as APIAuthService } from '../../../app/api/services';
 
 export const JWT_LOCALSTORAGE_KEY = 'jwt';
 
