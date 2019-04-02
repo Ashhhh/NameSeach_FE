@@ -24,3 +24,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Notes
 
 You would ideally pull the swagger.json from the API project or from the API itself
+Sadly I prioritised the backend way too much. I should have spent more time on the Angular side of things! We are lacking E2E tests and as many component/service tests as we would like.
