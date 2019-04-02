@@ -6,6 +6,9 @@ import { AuthService } from '../../../../../app/core/services/auth.service';
 
 export const NO_LOGIN_MESSAGE = 'You need to enter a username or password';
 
+/**
+ * Page for logging in or registering with the API
+ */
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -23,7 +26,10 @@ export class LoginPageComponent {
   public password = '';
   public pending = false;
 
-  validate() {
+  /**
+   * Validate the current username and password inputs. Shows a message if validation fails.
+   */
+  validate(): boolean {
     if (!this.username || !this.password) {
       this.snackbar.open(NO_LOGIN_MESSAGE);
       return false;
@@ -32,6 +38,9 @@ export class LoginPageComponent {
     return true;
   }
 
+  /**
+   * Attempt to log in to the API and redirect to the home screen (Currently the Search)
+   */
   login() {
     if (!this.validate()) {
       return;
@@ -54,6 +63,9 @@ export class LoginPageComponent {
       );
   }
 
+  /**
+   * Attempt to register with the API and redirect to the home screen (Currently the Search)
+   */
   register() {
     if (!this.validate()) {
       return;

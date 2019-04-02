@@ -11,6 +11,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 
+/**
+ * Module for the Login pages and non-shared services
+ */
 @NgModule({
   declarations: [LoginPageComponent],
   imports: [

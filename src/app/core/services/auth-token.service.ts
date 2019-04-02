@@ -1,22 +1,34 @@
 import { Injectable } from '@angular/core';
-import { AuthService as APIAuthService } from '../../../app/api/services';
 
 export const JWT_LOCALSTORAGE_KEY = 'jwt';
 
+/**
+ * A service for managing the auth token currently stored in the users LocalStorage
+ */
 @Injectable({
   providedIn: 'root'
 })
 export class AuthTokenService {
 
-  setToken(token: string) {
+  /**
+   * Set the current JWT Token
+   * @param token JWT Token
+   */
+  setToken(token: string): void {
     localStorage.setItem(JWT_LOCALSTORAGE_KEY, token);
   }
 
-  getToken() {
+  /**
+   * Gets the current JWT Token
+   */
+  getToken(): string {
     return localStorage.getItem(JWT_LOCALSTORAGE_KEY);
   }
 
-  clearToken() {
+  /**
+   * Clears the JWT Token from LocalStorage
+   */
+  clearToken(): void {
     localStorage.removeItem(JWT_LOCALSTORAGE_KEY);
   }
 

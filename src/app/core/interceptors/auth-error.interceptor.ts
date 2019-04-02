@@ -6,6 +6,9 @@ import { Injectable } from '@angular/core';
 
 export const ERROR_MESSAGE_500 = 'An error has occurred on the server. Please try again later.';
 
+/**
+ * HTTP Interceptor for handling errors from the API and showing relevant UI
+ */
 @Injectable({ providedIn: 'root' })
 export class AuthErrorInterceptor implements HttpInterceptor {
 

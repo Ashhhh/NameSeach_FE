@@ -4,6 +4,9 @@ import {Observable, throwError} from 'rxjs';
 import { AuthService } from '../services/auth.service';
 import { Injectable } from '@angular/core';
 
+/**
+ * A HTTP Interceptor for logging the user out if they encounter a 401 FORBIDDEN status code
+ */
 @Injectable({ providedIn: 'root' })
 export class AuthInterceptor implements HttpInterceptor {
 
