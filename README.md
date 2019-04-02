@@ -26,7 +26,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 You would ideally pull the swagger.json from the API project or from the API itself
 
 Sadly I prioritised the backend way too much. I should have spent more time on the Angular side of things! We are lacking E2E tests and as many component/service tests as we would like.
-
-It definitely needs validation. I would have used express-validator
-
-Finally, the Mongo query should really be cached in Redis. You could likely tell it to cache based on the search term used. It would be fairly easy to detect which key in redis to invalidate.
