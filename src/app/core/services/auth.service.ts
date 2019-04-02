@@ -9,6 +9,10 @@ import { RoutePaths } from '../../../app/app-routing.module';
 
 export const JWT_LOCALSTORAGE_KEY = 'jwt';
 
+export function tokenGetter(): string {
+    return localStorage.getItem(JWT_LOCALSTORAGE_KEY);
+}
+
 /**
  * A Service for managing authentication with the API
  */
