@@ -8,7 +8,7 @@ import { ApiModule } from '../api/api.module';
 import { environment } from '../../environments/environment';
 import { MatSnackBarModule, MatSnackBar } from '@angular/material/snack-bar';
 import { AuthErrorInterceptor } from './interceptors/auth-error.interceptor';
-import { JWT_LOCALSTORAGE_KEY } from './services/auth.service';
+import { JWT_LOCALSTORAGE_KEY, tokenGetter } from './services/auth.service';
 
 @NgModule({
   imports: [
@@ -18,9 +18,7 @@ import { JWT_LOCALSTORAGE_KEY } from './services/auth.service';
     HttpClientModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: () => {
-          return localStorage.getItem(JWT_LOCALSTORAGE_KEY);
-        },
+        tokenGetter,
         whitelistedDomains: ['localhost:3000']
       }
     }),
